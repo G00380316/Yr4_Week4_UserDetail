@@ -15,12 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     private RegistrationServiceClient registrationServiceClient;
-    private final AcknowledgeService acknowledgeService;
 
     @Autowired
-    public UserController(RegistrationServiceClient registrationServiceClient, AcknowledgeService acknowledgeService) {
+    public UserController(RegistrationServiceClient registrationServiceClient) {
         this.registrationServiceClient = registrationServiceClient;
-        this.acknowledgeService = acknowledgeService;
     }
 
     @PostMapping("/confirm-and-register")
